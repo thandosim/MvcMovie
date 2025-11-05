@@ -52,9 +52,9 @@ namespace MvcMovie.Controllers
         movies = movies.Where(x => x.Genre == movieGenre);
     }
 
-    if (!string.IsNullOrEmpty(movieYear))
+    if (!string.IsNullOrEmpty(movieYear) && int.TryParse(movieYear, out int year))
     {
-        movies = movies.Where(m => m.ReleaseDate.Year.ToString() == movieYear);
+        movies = movies.Where(m => m.ReleaseDate.Year >= year);
     }
 
     // Build the unified view model
