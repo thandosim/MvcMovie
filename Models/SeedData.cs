@@ -51,6 +51,30 @@ public static class SeedData
                     Genre = "Western",
                     Price = 3.99M,
                     Rating = "R"
+                },
+                new Movie
+                {
+                    Title = "Transformers",
+                    ReleaseDate = DateTime.Parse("2007-07-03"),
+                    Genre = "Action",
+                    Price = 10.99M,
+                    Rating = "PG-13"
+                },
+                new Movie
+                {
+                    Title = "Man of Steel",
+                    ReleaseDate = DateTime.Parse("2013-06-14"),
+                    Genre = "Superhero",
+                    Price = 11.99M,
+                    Rating = "PG-13"
+                },
+                new Movie
+                {
+                    Title = "Hulk",
+                    ReleaseDate = DateTime.Parse("2003-06-20"),
+                    Genre = "Superhero",
+                    Price = 9.49M,
+                    Rating = "PG-13"
                 }
             );
             context.SaveChanges();
